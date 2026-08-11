@@ -1,0 +1,6 @@
+Mantenere  la struttura generale del progetto, la pipeline, i modelli, gli script di training/evaluation e le parti di conversione/visualizzazione. I vecchi runs, i checkpoint e i video sono solo risultati/esperimenti che non ci servono, magari giusto per dare un'idea sulle accuracy da ottenere.
+Per quanto riguarda la suddivisione delle cartelle:
+1. Cartella Carlo: contiene soprattutto script legati al modello, ai test finali, al real-time e a qualche risultato. È utile per capire come è stata costruita la pipeline e come viene valutato il sistema.
+2. Common Code: è la parte più “centrale” e generica. Qui ci sono gli script per creare il dataset, convertire le label, fare training, evaluation e gestire la pipeline. È probabilmente la base più riutilizzabile.
+3. Cartella Filippo: è più orientata a preprocessing, conversioni da JSON a formati diversi, uso di SAM/MedSAM e test su maschere. È utile soprattutto per creare o trasformare il dataset e per sperimentare con altri approcci.
+4. TTI_DetectionV2: questa è la cartella più vicina al task vero e proprio. Ha già una struttura pensata per la detection TTI, con pipeline, evaluation, filtro dataset, mapping classi e visualizzazione. Questa è probabilmente la parte più importante da prendere come riferimento.

@@ -1,0 +1,30 @@
+
+train:  /kaggle/input/tti-dataset/dataset/yolo_dataset/images/train   # path to training images
+val: /kaggle/input/tti-dataset/dataset/yolo_dataset/images/val        # path to validation images
+names:
+#Tool id
+  0: unknown_tool
+  1: dissector
+  2: scissors
+  3: suction
+  4: grasper 3
+  5: harmonic
+  6: grasper
+  7: bipolar
+  8: grasper 2
+  9: cautery (hook, spatula)
+  10: ligasure
+  11: stapler
+
+#TTI id
+  12: unknown_tti
+  13: coagulation
+  14: other
+  15: retract and grab
+  16: blunt dissection
+  17: energy - sharp dissection
+  18: staple
+  19: retract and push
+  20: cut - sharp dissection
+
+
