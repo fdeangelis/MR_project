@@ -1,0 +1,17 @@
+path: /home/federico-ai-rob/Scrivania/AIRO/MR_project/yolo_dataset
+train: /home/federico-ai-rob/Scrivania/AIRO/MR_project/yolo_dataset/images/train
+val: /home/federico-ai-rob/Scrivania/AIRO/MR_project/yolo_dataset/images/val
+test: /home/federico-ai-rob/Scrivania/AIRO/MR_project/yolo_dataset/images/test
+names:
+  0: tool_0
+  1: tool_1
+  2: tool_2
+  3: tool_3
+  4: tool_4
+  5: tool_5
+  6: tool_6
+  7: tool_7
+  8: tool_8
+  9: tool_9
+  10: tool_10_UNUSED
+  11: tool_11
