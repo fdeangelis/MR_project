@@ -254,6 +254,7 @@ rqt-srv==1.2.3
 rqt-topic==1.7.5
 safetensors==0.8.0
 scikit-image==0.26.0
+scikit-learn==1.7.2
 scipy==1.17.1
 Send2Trash==2.1.0
 sensor-msgs==5.3.7
