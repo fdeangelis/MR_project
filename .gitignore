@@ -17,4 +17,3 @@ dist/
 .vscode/settings.json
 Baseline/General.md
 yolo_dataset/
-Baseline/Yolo11/configs/
