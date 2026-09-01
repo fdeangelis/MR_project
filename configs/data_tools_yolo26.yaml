@@ -15,3 +15,12 @@ names:
   9: tool_9
   10: tool_10_UNUSED
   11: tool_11
+  12: Unknown TTI
+  13: Coagulation
+  14: Other
+  15: Retract and grab
+  16: Blunt dissection
+  17: Energy- sharp dissection
+  18: Staple
+  19: Retract and push
+  20: Cut- sharp dissection
