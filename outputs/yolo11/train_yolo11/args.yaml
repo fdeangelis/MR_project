@@ -1,7 +1,7 @@
 task: segment
 mode: train
 model: yolo11n-seg.pt
-data: /home/federico-ai-rob/Scrivania/AIRO/MR_project/configs/data_tools_yolo11.yaml
+data: /configs/data_tools_yolo11.yaml
 epochs: 150
 time: null
 patience: 100
@@ -12,7 +12,7 @@ save_period: -1
 cache: false
 device: '0'
 workers: 8
-project: /home/federico-ai-rob/Scrivania/AIRO/MR_project/outputs/yolo11
+project: /outputs/yolo11
 name: train_yolo11
 exist_ok: true
 pretrained: true
@@ -113,4 +113,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: tracktrack.yaml
-save_dir: /home/federico-ai-rob/Scrivania/AIRO/MR_project/outputs/yolo11/train_yolo11
+save_dir: /outputs/yolo11/train_yolo11
