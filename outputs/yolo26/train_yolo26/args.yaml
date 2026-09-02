@@ -2,7 +2,7 @@ task: segment
 mode: train
 model: yolo26n-seg.pt
 data: /home/federico-ai-rob/Scrivania/AIRO/MR_project/configs/data_tools_yolo26.yaml
-epochs: 85
+epochs: 150
 time: null
 patience: 100
 batch: 16
