@@ -77,8 +77,6 @@ Since the U-Net showed lower segmentation performance than YOLO26 in the initial
 MR_project/
 │
 ├── Dataset/
-│   ├── Descrizione.docx             # Dataset preparation documentation
-│   ├── README.md                    # Additional dataset information
 │   ├── create_dataset.py            # Converts original data to YOLO and U-Net formats
 │   └── dataset_summary.py           # Dataset statistics and consistency checks
 │
