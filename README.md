@@ -35,7 +35,7 @@ Input Frame
     ↓
 YOLO11 / YOLO26
     ↓
-Tool and TTI-related Detections
+Tool and TTI-related Segmentations
     ↓
 Tool–Tissue Candidate Pairs
     ↓
