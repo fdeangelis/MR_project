@@ -89,7 +89,8 @@ MR_project/
 │
 ├── comparison/                      # End-to-end YOLO11 vs YOLO26 experiments
 │   ├── 01_initial_comparison/       # Preliminary comparison
-│   └── 02_final_comparison/         # Controlled comparison under identical settings
+│   ├── 02_final_comparison/         # Controlled comparison under identical settings
+│   └── ViT2/                        #YOLO11 vs YOLO26 comparison using the ViT2 classifier
 │
 ├── configs/
 │   └── data_tools_yolo26.yaml       # YOLO dataset configuration and class mapping
