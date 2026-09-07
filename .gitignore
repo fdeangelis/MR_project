@@ -16,3 +16,5 @@ dist/
 *.log
 .vscode/settings.json
 yolo_dataset/
+ViT2.pt
+*.pt
