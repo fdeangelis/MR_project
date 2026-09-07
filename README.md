@@ -144,13 +144,19 @@ The ResNet-18-based ROIClassifier performs downstream TTI classification using c
 
 ---
 
-## Final YOLO11 vs YOLO26 Comparison
+## YOLO11 vs YOLO26 Comparison
 
 An initial comparison was first performed using the provided YOLO11 baseline and the YOLO26 model trained during the project.
 
-A final **controlled comparison** was then performed by training YOLO11 and YOLO26 under identical conditions and evaluating them using the same test set, Depth Anything V2 model, ROIClassifier, and frame-level evaluation protocol.
+A controlled comparison was then performed by evaluating YOLO11 and YOLO26 under the same experimental conditions. Both models were evaluated on the same test set and using the same downstream components within each experiment.
 
-| Metric | YOLO11 | YOLO26 |
+Two ROI classification configurations were evaluated: ResNet and ViT.
+
+### Comparison with ResNet
+
+The first controlled comparison used ResNet as the ROI classifier.
+
+| Metric | YOLO11 + ResNet | YOLO26 + ResNet |
 |---|---:|---:|
 | Accuracy | **0.802** | 0.681 |
 | Precision | 0.896 | **0.938** |
@@ -158,7 +164,23 @@ A final **controlled comparison** was then performed by training YOLO11 and YOLO
 | F1-score | **0.871** | 0.758 |
 | Specificity | 0.641 | **0.846** |
 
-YOLO11 achieved the best overall trade-off, with higher accuracy, recall, and F1-score. YOLO26 achieved higher precision and specificity but produced substantially more false negatives.
+With the ResNet classifier, YOLO11 achieved the best overall trade-off, with higher accuracy, recall, and F1-score. YOLO26 achieved higher precision and specificity, but produced more false negatives.
+
+### Comparison with ViT
+
+A second controlled comparison was performed using the ViT-based ROI classifier on the full test set.
+
+| Metric | YOLO11 + ViT | YOLO26 + ViT |
+|---|---:|---:|
+| Accuracy | **0.500000** | 0.472527 |
+| Precision | **0.933333** | 0.912281 |
+| Recall | **0.391608** | 0.363636 |
+| F1-score | **0.551724** | 0.520000 |
+| Specificity | **0.897436** | 0.871795 |
+
+With the ViT classifier, YOLO11 outperformed YOLO26 across all reported metrics. Both configurations showed high precision and specificity but substantially lower recall, indicating that the main limitation was the high number of false negatives.
+
+Overall, YOLO11 performed better than YOLO26 in both downstream classification configurations, particularly in terms of recall and F1-score.
 
 ---
 
