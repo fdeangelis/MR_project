@@ -2,7 +2,7 @@
 
 This repository contains the implementation developed for the Medical Robotics project on **surgical tool segmentation and Tool–Tissue Interaction (TTI) analysis in endoscopic images**.
 
-The project investigates surgical scene understanding using **YOLO11**, **YOLO26**, a **multiclass U-Net**, **Depth Anything V2**, and a **ResNet-18-based ROIClassifier**.
+The project investigates surgical scene understanding using **YOLO11**, **YOLO26**, a **multiclass U-Net**, **Depth Anything V2**, **ResNet-18-based ROIClassifier**, and a **ViT ROIClassifier**.
 
 The work includes dataset preprocessing, segmentation, depth-based analysis, and an end-to-end comparison between YOLO11 and YOLO26 for TTI detection.
 
@@ -44,12 +44,12 @@ Depth Anything V2
 5-Channel ROI
 (Image + Depth + Union Mask)
     ↓
-ROIClassifier
+ROIClassifierViT/ROIClassifier
     ↓
 TTI Prediction
 ```
 
-The same Depth Anything V2 model and ROIClassifier are used for both architectures.
+The same Depth Anything V2 model and ROIClassifierViT (or in the experimental phase ROIClassifier) are used for both architectures.
 
 ### U-Net
 
@@ -105,11 +105,12 @@ MR_project/
 │
 ├── Baseline+Yolo11.ipynb            # End-to-end TTI pipeline with YOLO11
 ├── Baseline+Yolo26.ipynb            # End-to-end TTI pipeline with YOLO26
-├── ROImodel.pt                      # ROIClassifier weights
+├── ROImodel.pt                      # ROIClassifier weights (ResNet)
 ├── labels.ipynb                     # Merges tool and TTI labels for YOLO
 ├── program(yolo+unet).ipynb         # YOLO, U-Net and depth-processing experiments
 ├── train_yolo11.ipynb               # YOLO11 training for the controlled comparison
 ├── requirements.txt                 # Python dependencies
+├── report_MR_project.pdf            # Report of the entire project
 └── README.md
 ```
 
@@ -138,9 +139,10 @@ Because its initial segmentation results were lower than those obtained with YOL
 
 Depth Anything V2 is used for monocular **relative-depth estimation** and provides additional spatial information for contact-region estimation and ROI construction.
 
-### ROIClassifier
+### ROIClassifierViT
 
-The ResNet-18-based ROIClassifier performs downstream TTI classification using candidate tool–tissue ROIs generated from image, depth, and segmentation information.
+The Vision Transformer ROIClassifierViT performs downstream TTI classification using candidate tool–tissue ROIs generated from image, depth, and segmentation information.
+During the preliminary phase the ResNet-18-based ROIClassifier performs downstream TTI classification using candidate tool–tissue ROIs generated from image, depth, and segmentation information.
 
 ---
 
