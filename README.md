@@ -142,6 +142,7 @@ Depth Anything V2 is used for monocular **relative-depth estimation** and provid
 ### ROIClassifierViT
 
 The Vision Transformer ROIClassifierViT performs downstream TTI classification using candidate tool–tissue ROIs generated from image, depth, and segmentation information.
+
 During the preliminary phase the ResNet-18-based ROIClassifier performs downstream TTI classification using candidate tool–tissue ROIs generated from image, depth, and segmentation information.
 
 ---
